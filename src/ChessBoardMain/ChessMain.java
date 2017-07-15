@@ -26,4 +26,8 @@ public class ChessMain {
         return false;
     }
 
+    public boolean validatePosition(){
+        return false;
+    }
+
 }
