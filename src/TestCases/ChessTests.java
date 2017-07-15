@@ -10,11 +10,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class ChessTests {
 
+    private String[] pieces = {"king","queen","bishop","horse","rook","pawn"};
+
     @Test
     public void PieceTypeShouldBeValid(){
-        ChessMain pieceTypeValidation = new ChessMain();
-        boolean isValid = pieceTypeValidation.valdiatePiece();
-        assertEquals(true,isValid);
+        for (String piece: pieces){
+            ChessMain pieceTypeValidation = new ChessMain();
+            boolean isValid = pieceTypeValidation.valdiatePiece(piece);
+            assertEquals(true,isValid);
+        }
+
     }
 
     @Test

@@ -14,15 +14,13 @@ public class ChessMain {
         this.piecePosition = piecePosition;
     }
 
-    public static void main(String[] args) {
+
+    public boolean valdiatePiece(String piece){
         for (PieceEnum p : PieceEnum.values()) {
-            if (p.name().equalsIgnoreCase("king"))
-                System.out.println("true");
+            if (p.name().equalsIgnoreCase(piece))
+                return true;
 
         }
-    }
-
-    public boolean valdiatePiece(){
         return false;
     }
 
