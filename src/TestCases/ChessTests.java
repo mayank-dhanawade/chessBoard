@@ -1,6 +1,7 @@
 package TestCases;
 
 import ChessBoardMain.ChessMain;
+import ChessBoardMain.Spot;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,8 +26,14 @@ public class ChessTests {
     @Test
     public void PiecePositionShouldBeValid(){
         ChessMain piecePositionValidation = new ChessMain();
-        boolean isValid = piecePositionValidation.validatePosition();
-        assertEquals(true,isValid);
+        Spot spot = piecePositionValidation.validatePosition("A4");
+
+    }
+
+    @Test
+    public void runTests(){
+        ChessMain pieceAndPosition = new ChessMain();
+        boolean isValid = pieceAndPosition.testRunner("KING A431");
     }
 
     @Test
