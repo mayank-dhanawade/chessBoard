@@ -17,8 +17,7 @@ public class ChessTests {
     public void PieceTypeShouldBeValid(){
         for (String piece: pieces){
             ChessMain pieceTypeValidation = new ChessMain();
-            boolean isValid = pieceTypeValidation.valdiatePiece(piece);
-            assertEquals(true,isValid);
+            pieceTypeValidation.valdiatePiece(piece);
         }
 
     }
@@ -33,7 +32,7 @@ public class ChessTests {
     @Test
     public void runTests(){
         ChessMain pieceAndPosition = new ChessMain();
-        boolean isValid = pieceAndPosition.testRunner("KING A431");
+        boolean isValid = pieceAndPosition.testRunner("KING D5");
     }
 
     @Test
